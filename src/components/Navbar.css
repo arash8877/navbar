@@ -1,0 +1,43 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+    background-color: #f8f8f8f8;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    width: 300px;
+    
+}
+.nav-links li a{
+    text-decoration: none;
+    color: #262121;
+
+}
+
+.nav-logo img {
+    height: 40px;
+    width: 40px;
+}
+
+.nav-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 70px;
+    color: #262121;
+
+}
+.nav-social li a{
+    color: #262121;
+    
+}
