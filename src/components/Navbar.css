@@ -7,6 +7,9 @@ nav {
     box-shadow: 0 0 10px rgba(117, 117, 117, 0.3);
     height: 65px;
     padding: 0 20px;
+    direction: rtl;
+    position: relative;
+
 }
 
 .container {
@@ -14,7 +17,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse;
     margin: auto;
 }
 
@@ -24,17 +26,30 @@ nav {
     justify-content: space-between;
 }
 
+.nav-logo {
+    background: transparent;
+    border: none;
+   
+}
+
 .nav-logo img {
     height: 40px;
     width: 40px;
 }
 
-.nav-logo button {
-    background: transparent;
-    border: 0;
+.nav-logo .nav-toggle {
     font-size: 30px;
     cursor: pointer;
+}
+
+.nav-logo button {
+    background: transparent;
+    border: none;
     display: none;
+}
+
+.nav-links{
+    transition: all 0.5s ease;
 }
 
 .nav-links .list {
@@ -66,8 +81,44 @@ nav {
     color: #333;
 }
 
-@media screen and (max-width: 767) {
-    
+@media screen and (max-width: 767px) {
+    .nav-logo{
+        width: 100%;
+    }
+
+    .nav-logo button{
+        display: block  !important;
+    }
+
+    .nav-links{
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 65px;
+        height: 0;
+        background: #fff;
+        overflow: hidden;
+        
+    }
+
+    .nav-links .list{
+        display: block;
+        padding-right: 5px;
+        
+
+    }
+
+    .nav-links .list li{
+        padding: 15px 0px;
+    }
+
+    .nav-social{
+        display: none;
+    }
+
+    .active{
+        height: 14rem;
+    }
 }
 
 

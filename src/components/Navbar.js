@@ -1,17 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Navbar.css'
-import { FaFacebookF,FaLinkedinIn, FaTwitter, FaBars } from "react-icons/fa";
+import { FaFacebookF,FaLinkedinIn, FaTwitter, FaBars, FaTimes } from "react-icons/fa";
 
 
 const Navbar = () => {
+const [showList, setShowList] = useState(false)
+
   return (
       <nav >
         <div className='container'>
           <div className='nav-logo'>
-            <button><FaBars/></button>
+            <button onClick={() => setShowList(!showList)}>
+              {showList? <FaTimes className='nav-toggle'/> : <FaBars className='nav-toggle'/>}
+            </button>
             <img src='../logo192.png'></img>
           </div>
-          <div className='nav-links'>
+          <div className={`${showList? 'nav-links active' : 'nav-links' }`}>
             <ul className='list'>
               <li><a href='/'>Home</a></li>
               <li><a href='/'>Projects</a></li>
